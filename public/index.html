@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simula la exposiciÃ³n digital de tu empresa y descubre cuÃ¡nto tardarÃ­a un atacante en encontrar una entrada.">
+  <title>BRECHAÂ° â€” Simulador de exposiciÃ³n digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header><a class="brand" href="#">BRECHA<span>Â°</span></a><div class="status"><i></i> simulador seguro</div></header>
+  <main>
+    <section id="intro" class="hero panel active">
+      <div class="eyebrow">SIMULADOR DE EXPOSICIÃ“N Â· 3 MINUTOS</div>
+      <h1>Â¿CuÃ¡nto tardarÃ­a<br>un atacante en <em>entrar?</em></h1>
+      <p class="lead">Toma seis decisiones como si hoy comenzara un ataque. Descubre tu ventana de exposiciÃ³n y el punto que un adversario probarÃ­a primero.</p>
+      <div class="promise-row"><div><strong>01</strong><span>6 escenarios reales</span></div><div><strong>02</strong><span>riesgo inmediato</span></div><div><strong>03</strong><span>plan de contenciÃ³n</span></div></div>
+      <button class="primary" id="start">Iniciar simulaciÃ³n <span>â†—</span></button>
+      <p class="micro">No escaneamos tus sistemas. No pedimos datos para ver el diagnÃ³stico inicial.</p>
+    </section>
+
+    <section id="quiz" class="panel quiz">
+      <div class="quiz-top"><span id="step-label">VECTOR 01 / 06</span><div class="progress"><i id="progress"></i></div></div>
+      <div class="question-wrap">
+        <p class="dimension" id="dimension"></p>
+        <h2 id="question"></h2>
+        <div id="options" class="options"></div>
+      </div>
+      <button class="back" id="back">â† Volver</button>
+    </section>
+
+    <section id="result" class="panel result">
+      <div class="result-grid">
+        <div class="score-card">
+          <div class="eyebrow">ÃNDICE DE RESILIENCIA</div>
+          <div class="score-ring"><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="61"></circle><circle id="score-arc" class="arc" cx="70" cy="70" r="61"></circle></svg><div><strong id="score">0</strong><span>/100</span></div></div>
+          <div class="archetype" id="archetype"></div>
+        </div>
+        <div class="diagnosis">
+          <p class="kicker">SUPERFICIE DE ATAQUE</p><h2 id="diagnosis-title"></h2><p id="diagnosis-copy"></p>
+          <div class="bars" id="bars"></div>
+        </div>
+      </div>
+      <div class="unlock">
+        <div><span class="unlock-icon">âœ¦</span><p class="kicker">CONTENER LA BRECHA</p><h3>Tu plan de defensa de 72 horas</h3><p>Desbloquea el vector mÃ¡s probable, tres acciones priorizadas y una prueba de control diseÃ±ada desde tus respuestas.</p></div>
+        <form id="lead-form">
+          <label>Nombre<input name="name" required maxlength="80" placeholder="Â¿CÃ³mo te llamas?"></label>
+          <label>Correo<input name="email" type="email" required maxlength="160" placeholder="tu@correo.com"></label>
+          <label>Empresa o rubro<input name="business" required maxlength="120" placeholder="Ej. construcciÃ³n, 250 personas"></label>
+          <label class="consent"><input type="checkbox" required><span>Acepto recibir mi resultado y recomendaciones de seguridad. Sin spam.</span></label>
+          <button class="primary" type="submit">Desbloquear plan de defensa <span>â†’</span></button>
+          <p class="form-error" id="form-error"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="blueprint" class="panel blueprint">
+      <div class="eyebrow">PLAN DESBLOQUEADO Â· CONFIDENCIAL</div>
+      <h1 id="bp-headline"></h1><p class="bp-intro">Esta es tu ruta mÃ¡s corta hacia una oferta fÃ¡cil de entender, recordar y elegir.</p>
+      <div class="bp-grid"><article><span>01 Â· VECTOR MÃS PROBABLE</span><h3 id="bp-formula"></h3><p id="bp-example"></p></article><article><span>02 Â· PRÃ“XIMAS 72 HORAS</span><ol id="bp-priorities"></ol></article><article class="experiment"><span>03 Â· PRUEBA DE CONTROL</span><h3 id="bp-experiment"></h3></article></div>
+      <button class="secondary" onclick="window.print()">Guardar informe PDF</button><button class="back" id="restart">Repetir simulaciÃ³n</button>
+    </section>
+  </main>
+  <footer><span>BRECHAÂ° Â© 2026</span><span>La seguridad comienza viendo lo que un atacante verÃ­a.</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
+
